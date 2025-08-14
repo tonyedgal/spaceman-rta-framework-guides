@@ -3,11 +3,12 @@ import Header from './components/Header';
 import WithComponents from './pages/WithComponents';
 import WithHooks from './pages/WithHooks';
 import { ThemeProvider } from './components/theme/ThemeProvider';
+import ScreenSizeBlocker from './components/ScreenSizeBlocker';
 // import { SpacemanThemeProvider } from "@space-man/react-theme-animation";
 
 function Layout() {
   return (
-    <main className='relative h-screen w-full overflow-auto'>
+    <main className='relative h-screen w-full overflow-hidden'>
       <ThemeProvider
         attribute='class'
         defaultTheme='dark'
@@ -30,14 +31,16 @@ function Layout() {
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path='/' element={<Layout />}>
-          <Route index element={<WithComponents />} />
-          <Route path='hook' element={<WithHooks />} />
-        </Route>
-      </Routes>
-    </Router>
+    <ScreenSizeBlocker>
+      <Router>
+        <Routes>
+          <Route path='/' element={<Layout />}>
+            <Route index element={<WithComponents />} />
+            <Route path='hook' element={<WithHooks />} />
+          </Route>
+        </Routes>
+      </Router>
+    </ScreenSizeBlocker>
   );
 }
 
