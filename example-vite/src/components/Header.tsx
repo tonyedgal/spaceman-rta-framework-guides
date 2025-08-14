@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router';
 import { motion } from 'motion/react';
+import Spaceman from '../assets/Spaceman.webp'; // Adjust the path as necessary
 
 const navItems = [
   { name: 'With-Components', path: '/' },
@@ -18,7 +19,7 @@ export default function Header() {
       <nav className='flex items-center relative justify-between z-100 rounded-lg w-full max-w-[1200px] mx-auto'>
         <Link to='/' className='px-1'>
           <img
-            src='src/assets/Spaceman.webp'
+            src={Spaceman}
             alt='Portrait'
             height={'32'}
             width={'32'}
