@@ -39,7 +39,14 @@ const ThemeSection = () => {
           Theme Selector:
         </label>
         <ThemeSelector
-          colorThemes={['default', 'caffeine', 'mono', 'supabase']}
+          colorThemes={[
+            'default',
+            'caffeine',
+            'mono',
+            'supabase',
+            'mocha',
+            'perpetuity',
+          ]}
           currentColorTheme={currentColorTheme}
           onColorThemeChange={setColorTheme}
         />
