@@ -29,7 +29,14 @@ const WithComponents = () => {
           <section className='container mx-auto px-4 xl:px-12 py-8'>
             <SpacemanThemeProvider
               themes={['light', 'dark', 'system']}
-              colorThemes={['default', 'caffeine', 'mono', 'supabase']}
+              colorThemes={[
+                'default',
+                'caffeine',
+                'mono',
+                'supabase',
+                'mocha',
+                'perpetuity',
+              ]}
               defaultTheme='system'
               defaultColorTheme='default'
             >
