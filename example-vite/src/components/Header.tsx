@@ -34,7 +34,7 @@ export default function Header() {
             return (
               <Link
                 key={item.path}
-                className={`px-5 shrink py-3 text-muted-foreground rounded-none leading-[14px] text-xs lg:text-sm relative no-underline duration-300 ease-in-out ${
+                className={`px-5 shrink py-3 text-muted-foreground rounded-none leading-3.5 text-xs lg:text-sm relative no-underline duration-300 ease-in-out ${
                   active ? 'font-semibold' : ''
                 }`}
                 to={item.path}
@@ -62,11 +62,11 @@ export default function Header() {
                 )}
                 {active && (
                   <motion.div
-                    className='absolute bottom-[-6px] rounded-full left-0 right-0 px-2 flex w-full items-center justify-center'
+                    className='absolute -bottom-1.5 rounded-full left-0 right-0 px-2 flex w-full items-center justify-center'
                     transition={{ duration: 0.5 }}
                     layoutId='pill'
                   >
-                    <div className='h-[2px] w-full border border-accent bg-accent'></div>
+                    <div className='h-0.5 w-full border border-accent bg-accent'></div>
                   </motion.div>
                 )}
               </Link>
