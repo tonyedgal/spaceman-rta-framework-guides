@@ -1,7 +1,7 @@
 import {
   ThemeSwitcher,
   ThemeSelector,
-  useSpacemanTheme,
+  useViteTheme,
 } from '@space-man/react-theme-animation';
 
 const ThemeSection = () => {
@@ -10,7 +10,7 @@ const ThemeSection = () => {
     colorTheme: currentColorTheme,
     setTheme,
     setColorTheme,
-  } = useSpacemanTheme();
+  } = useViteTheme();
 
   return (
     <section className='flex flex-wrap items-center h-36 md:h-24 px-12 justify-between rounded-lg border border-border bg-background'>
