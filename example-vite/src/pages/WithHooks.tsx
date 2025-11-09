@@ -1,6 +1,5 @@
 import DotBackground from '@/components/backgrounds/DotBackground';
 import { ThemeToggle } from '@/components/theme/ThemeToggle';
-import { Helmet } from 'react-helmet-async';
 import {
   Select,
   SelectTrigger,
@@ -19,17 +18,20 @@ const WithHooks = () => {
 
   return (
     <>
-      <Helmet>
-        <title>With Hooks - Spaceman RTA Framework</title>
-        <meta
-          name='description'
-          content='Explore React hooks and theme management with the Spaceman RTA Framework'
-        />
-        <meta
-          name='keywords'
-          content='React, Hooks, Theme, Toggle, Spaceman, Framework'
-        />
-      </Helmet>
+      <title>With Hooks – Spaceman React Theme Animation</title>
+      <meta
+        name='description'
+        content='Explore UI components built with the Spaceman RTA Framework'
+      />
+      <meta
+        name='keywords'
+        content='React, Hooks, UI, Spaceman, View Transition API, Animated dark mode'
+      />
+      <link rel='author' href='https://twitter.com/TonyEdgal' />
+      <link
+        rel='author'
+        href='https://www.linkedin.com/in/anthony-edgal-8ba13715b/'
+      />
       <main className='flex flex-col items-center justify-start py-16 h-full bg-transparent'>
         <DotBackground />
         <section className='flex items-center justify-center gap-6 p-6 rounded-lg border border-border bg-background z-50'>
