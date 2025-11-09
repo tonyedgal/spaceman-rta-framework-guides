@@ -18,20 +18,6 @@ const WithHooks = () => {
 
   return (
     <>
-      <title>With Hooks – Spaceman React Theme Animation</title>
-      <meta
-        name='description'
-        content='Explore UI components built with the Spaceman RTA Framework'
-      />
-      <meta
-        name='keywords'
-        content='React, Hooks, UI, Spaceman, View Transition API, Animated dark mode'
-      />
-      <link rel='author' href='https://twitter.com/TonyEdgal' />
-      <link
-        rel='author'
-        href='https://www.linkedin.com/in/anthony-edgal-8ba13715b/'
-      />
       <main className='flex flex-col items-center justify-start py-16 h-full bg-transparent'>
         <DotBackground />
         <section className='flex items-center justify-center gap-6 p-6 rounded-lg border border-border bg-background z-50'>

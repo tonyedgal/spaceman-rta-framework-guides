@@ -11,20 +11,6 @@ import { ViteThemeProvider } from '@space-man/react-theme-animation';
 const WithComponents = () => {
   return (
     <>
-      <title>With Components – Spaceman React Theme Animation</title>
-      <meta
-        name='description'
-        content='Explore UI components built with the Spaceman RTA Framework'
-      />
-      <meta
-        name='keywords'
-        content='React, Components, UI, Spaceman, View Transition API, Animated dark mode'
-      />
-      <link rel='author' href='https://twitter.com/TonyEdgal' />
-      <link
-        rel='author'
-        href='https://www.linkedin.com/in/anthony-edgal-8ba13715b/'
-      />
       <main className='flex flex-col items-center justify-start py-16 h-full bg-transparent'>
         <BackgroundPattern />
         <main className='flex flex-col gap-12 w-full bg-transparent transition-colors'>
