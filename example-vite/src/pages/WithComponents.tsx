@@ -6,7 +6,7 @@ import { DropdownMenuDemo } from '@/components/DropdownMenuDemo';
 import KanbanDemo from '@/components/kanban/KanbanDemo';
 import { SheetDemo } from '@/components/SheetDemo';
 import ThemeSection from '@/components/theme/ThemeSection';
-import { SpacemanThemeProvider } from '@space-man/react-theme-animation';
+import { ViteThemeProvider } from '@space-man/react-theme-animation';
 import { Helmet } from 'react-helmet-async';
 
 const WithComponents = () => {
@@ -27,7 +27,7 @@ const WithComponents = () => {
         <BackgroundPattern />
         <main className='flex flex-col gap-12 w-full bg-transparent transition-colors'>
           <section className='container mx-auto px-4 xl:px-12 py-8'>
-            <SpacemanThemeProvider
+            <ViteThemeProvider
               themes={['light', 'dark', 'system']}
               colorThemes={[
                 'default',
@@ -41,7 +41,7 @@ const WithComponents = () => {
               defaultColorTheme='default'
             >
               <ThemeSection />
-            </SpacemanThemeProvider>
+            </ViteThemeProvider>
           </section>
           <section className='grid grid-cols-1 md:grid-cols-2 gap-6 px-4 xl:px-12 py-4'>
             <div className='flex flex-col items-center gap-4'>
