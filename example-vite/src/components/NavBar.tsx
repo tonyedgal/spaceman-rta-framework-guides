@@ -13,7 +13,7 @@ const NavBar = () => {
 
   const [hoveredPath, setHoveredPath] = useState<string | null>(pathName);
   return (
-    <section className='col-start-2 xl:col-start-3 row-start-3 flex items-center justify-center'>
+    <section className='col-start-2 xl:col-start-3 flex items-center justify-center'>
       {navItems.map((item) => {
         const active = pathName === item.path;
 
@@ -31,7 +31,7 @@ const NavBar = () => {
             <span>{item.name}</span>
             {item.path === hoveredPath && (
               <motion.div
-                className='absolute bottom-0 left-0 h-full bg-muted mix-blend-difference rounded-none -z-10'
+                className='absolute bottom-0 left-0 h-full bg-primary mix-blend-difference rounded-none -z-10'
                 layoutId='navbar'
                 aria-hidden='true'
                 style={{

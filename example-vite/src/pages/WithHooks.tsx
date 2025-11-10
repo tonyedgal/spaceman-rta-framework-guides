@@ -18,24 +18,30 @@ const WithHooks = () => {
 
   return (
     <>
-      <main className='flex flex-col items-center justify-start py-16 h-full bg-transparent'>
+      <main className='flex flex-col items-center justify-start py-8 md:py-16 h-full bg-transparent px-4'>
         <DotBackground />
-        <section className='flex items-center justify-center gap-6 p-6 rounded-lg border border-border bg-background z-50'>
+        <section className='flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 p-4 md:p-6 rounded-lg border border-border bg-background z-50 w-full max-w-4xl'>
           <div className='flex gap-2 items-center justify-center'>
-            <label className='text-sm font-medium'>Circle Theme:</label>
+            <label className='text-xs sm:text-sm font-medium whitespace-nowrap'>
+              Circle Theme:
+            </label>
             <ThemeToggle />
           </div>
           <div className='flex gap-2 items-center justify-center'>
-            <label className='text-sm font-medium'>Slide Theme:</label>
+            <label className='text-xs sm:text-sm font-medium whitespace-nowrap'>
+              Slide Theme:
+            </label>
             <SlideThemeToggle slideDirection={slideDirection} />
           </div>
-          <div className='flex items-center gap-2 p-2 bg-background rounded-md'>
-            <label className='text-sm font-medium'>Slide direction:</label>
+          <div className='flex flex-col sm:flex-row items-center gap-2 p-2 bg-background rounded-md w-full sm:w-auto'>
+            <label className='text-xs sm:text-sm font-medium whitespace-nowrap'>
+              Slide direction:
+            </label>
             <Select
               value={slideDirection}
               onValueChange={(v) => setSlideDirection(v as SlideDirection)}
             >
-              <SelectTrigger size='sm' className='w-36'>
+              <SelectTrigger size='sm' className='w-full sm:w-36'>
                 <SelectValue>{slideDirection}</SelectValue>
               </SelectTrigger>
               <SelectContent>

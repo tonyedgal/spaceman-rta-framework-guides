@@ -3,10 +3,11 @@ import Header from './components/Header';
 import WithComponents from './pages/WithComponents';
 import WithHooks from './pages/WithHooks';
 import { ThemeProvider } from './components/theme/ThemeProvider';
-import ScreenSizeBlocker from './components/ScreenSizeBlocker';
 import Hero from './components/Hero';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import NavBar from './components/NavBar';
+import ThemePicker from './components/ThemePicker';
+import { ViteThemeProvider } from '@space-man/react-theme-animation';
 
 function Layout() {
   return (
@@ -33,23 +34,23 @@ function Layout() {
           disableTransitionOnChange
         >
           <Header />
-          <div className='relative grid h-full grid-rows-[30rem_1px_3rem_1px_auto] grid-cols-[2.5rem_auto_2.5rem] xl:grid-cols-[auto_2rem_1200px_2rem_auto]'>
+          <div className='relative grid h-full grid-rows-[30rem_1px_5rem_1px_3rem_1px_auto] grid-cols-[0_auto_0] sm:grid-cols-[1.5rem_auto_1.5rem] xl:grid-cols-[auto_2rem_1200px_2rem_auto]'>
             <main className='col-start-2 xl:col-start-3'>
               <Hero />
             </main>
 
-            <div className='relative xl:col-start-3 col-start-2 row-start-2 h-px bg-border'></div>
-
+            <div className='relative xl:col-start-3 col-start-2 h-px bg-border'></div>
+            <ThemePicker />
+            <div className='relative xl:col-start-3 col-start-2 h-px bg-border'></div>
             <NavBar />
-
-            <div className='relative xl:col-start-3 col-start-2 row-start-4 h-px bg-border'></div>
+            <div className='relative xl:col-start-3 col-start-2 h-px bg-border'></div>
 
             <div className='relative col-start-2 xl:col-start-3 h-full w-full'>
               <Outlet />
             </div>
 
-            <div className='relative col-start-1 xl:col-start-2 row-span-full row-start-1 border-x border-border bg-[repeating-linear-gradient(315deg,var(--border)_0,var(--border)_1px,transparent_0,transparent_50%)] bg-size-[10px_10px]'></div>
-            <div className='relative col-start-3 xl:col-start-4 row-span-full row-start-1 border-x border-border bg-[repeating-linear-gradient(315deg,var(--border)_0,var(--border)_1px,transparent_0,transparent_50%)] bg-size-[10px_10px]'></div>
+            <div className='relative col-start-1 xl:col-start-2 row-span-full row-start-1 border-x border-border bg-[repeating-linear-gradient(315deg,var(--border)_0,var(--border)_1px,transparent_0,transparent_50%)] bg-size-[10px_10px] hidden sm:block'></div>
+            <div className='relative col-start-3 xl:col-start-4 row-span-full row-start-1 border-x border-border bg-[repeating-linear-gradient(225deg,var(--border)_0,var(--border)_1px,transparent_0,transparent_50%)] bg-size-[10px_10px] hidden sm:block'></div>
           </div>
         </ThemeProvider>
       </main>
@@ -61,8 +62,20 @@ function App() {
   const queryClient = new QueryClient();
 
   return (
-    <ScreenSizeBlocker>
-      <QueryClientProvider client={queryClient}>
+    <QueryClientProvider client={queryClient}>
+      <ViteThemeProvider
+        themes={['light', 'dark', 'system']}
+        colorThemes={[
+          'default',
+          'caffeine',
+          'mono',
+          'supabase',
+          'mocha',
+          'perpetuity',
+        ]}
+        defaultTheme='system'
+        defaultColorTheme='default'
+      >
         <Router>
           <Routes>
             <Route path='/' element={<Layout />}>
@@ -71,8 +84,8 @@ function App() {
             </Route>
           </Routes>
         </Router>
-      </QueryClientProvider>
-    </ScreenSizeBlocker>
+      </ViteThemeProvider>
+    </QueryClientProvider>
   );
 }
 
