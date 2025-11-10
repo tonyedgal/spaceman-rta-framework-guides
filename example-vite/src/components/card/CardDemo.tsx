@@ -67,7 +67,7 @@ export default function CardDemo() {
           <CardTitle>Recent Users</CardTitle>
         </CardHeading>
         <CardToolbar>
-          <Button mode='icon' variant='outline' size='sm'>
+          <Button variant='outline' size='sm'>
             <Settings />
           </Button>
         </CardToolbar>
@@ -112,7 +112,7 @@ export default function CardDemo() {
         })}
       </CardContent>
       <CardFooter className='justify-center'>
-        <Button mode='link' underlined='dashed'>
+        <Button>
           <Link to='#'>Learn more</Link>
         </Button>
       </CardFooter>
