@@ -142,7 +142,7 @@ const ThemePicker = () => {
       <MarqueeFade side='left' />
       <MarqueeFade side='right' />
       <MarqueeContent>
-        {[...themeColors, ...themeColors, ...themeColors].map((colorTheme) => {
+        {themeColors.map((colorTheme) => {
           const colors = isDark
             ? colorTheme.colors.dark
             : colorTheme.colors.light;
