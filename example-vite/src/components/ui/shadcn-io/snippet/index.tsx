@@ -29,7 +29,7 @@ export type SnippetHeaderProps = HTMLAttributes<HTMLDivElement>;
 export const SnippetHeader = ({ className, ...props }: SnippetHeaderProps) => (
   <div
     className={cn(
-      'flex flex-row items-center justify-between border-b bg-secondary p-1',
+      'flex flex-row items-center justify-between border-b bg-background p-1',
       className
     )}
     {...props}
@@ -82,10 +82,10 @@ export const SnippetCopyButton = ({
 
   return (
     <Button
-      className="opacity-0 transition-opacity group-hover:opacity-100"
+      className='opacity-0 transition-opacity group-hover:opacity-100'
       onClick={copyToClipboard}
-      size="icon"
-      variant="ghost"
+      size='icon'
+      variant='ghost'
       {...props}
     >
       {children ?? icon}
@@ -118,6 +118,6 @@ export const SnippetTabsContent = ({
     className={cn('mt-0 bg-background p-4 text-sm', className)}
     {...props}
   >
-    <pre className="truncate">{children}</pre>
+    <pre className='truncate'>{children}</pre>
   </TabsContent>
 );

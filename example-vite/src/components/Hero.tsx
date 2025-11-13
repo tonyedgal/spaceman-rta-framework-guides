@@ -1,6 +1,6 @@
 import { Button } from './ui/button';
-import { Snippet } from '@heroui/snippet';
 import Icon from './icon';
+import InstallSnippet from './InstallSnippet';
 
 const Hero = () => {
   return (
@@ -35,9 +35,7 @@ const Hero = () => {
           </a>
         </Button>
       </div>
-      <div className='flex items-center p-3 bg-background/50 border border-border rounded-md mt-6'>
-        <Snippet>npm install @space-man-react-theme-animation</Snippet>
-      </div>
+      <InstallSnippet />
     </section>
   );
 };
