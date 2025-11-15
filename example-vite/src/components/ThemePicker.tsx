@@ -151,7 +151,7 @@ const ThemePicker = () => {
             <Button
               key={colorTheme.value}
               onClick={createColorThemeToggle(colorTheme.value)}
-              className='transition-colors mx-5 border'
+              className='transition-colors mx-5 border w-44'
               style={{
                 backgroundColor: colors['--primary'],
                 color: colors['--primary-foreground'],
@@ -161,7 +161,7 @@ const ThemePicker = () => {
                 style={{
                   backgroundImage: `conic-gradient( ${colors['--primary']} 120deg, ${colors['--secondary']} 120deg 240deg, ${colors['--accent']} 240deg)`,
                 }}
-                className='size-5 rounded-full border'
+                className='size-5 rounded-full border mr-2'
               ></div>
               {colorTheme.name}
             </Button>
