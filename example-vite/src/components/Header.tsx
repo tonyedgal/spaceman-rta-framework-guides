@@ -23,15 +23,15 @@ export default function Header() {
           />
         </Link>
 
-        <Button variant='ghost' asChild>
+        <Button variant='ghost' asChild className='rounded-full'>
           <a
             href='https://github.com/tonyedgal/spaceman-react-theme-animation'
             target='_blank'
             rel='noopener noreferrer'
-            className='flex items-center p-2 hover:opacity-85 transition-opacity border rounded'
+            className='flex items-center p-2 hover:opacity-85 transition-opacity rounded-full'
           >
             <Icon name='github' className='w-5 h-5 mr-2' />
-            <p className='text-base leading-0 flex items-center mt-0.75'>
+            <p className='text-sm leading-0 flex items-center mt-0.75'>
               {stars > 0 && stars.toString()}
             </p>
           </a>

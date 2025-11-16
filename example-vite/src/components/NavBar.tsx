@@ -48,7 +48,7 @@ const NavBar = () => {
             )}
             {active && (
               <motion.div
-                className='absolute -bottom-2 rounded-full left-0 right-0 px-2 flex w-full items-center justify-center'
+                className='absolute -bottom-2 rounded-full left-0 right-0 px-2 flex w-full items-center justify-center z-50'
                 transition={{ duration: 0.5 }}
                 layoutId='pill'
               >
