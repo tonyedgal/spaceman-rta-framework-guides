@@ -44,7 +44,7 @@ function TaskCard({ task, asHandle, ...props }: TaskCardProps) {
     <div className='rounded-md border bg-card p-3 shadow-xs'>
       <div className='flex flex-col gap-2.5'>
         <div className='flex items-center justify-between gap-2'>
-          <span className='line-clamp-1 font-medium text-sm'>{task.title}</span>
+          <span className='line-clamp-1 text-sm font-medium'>{task.title}</span>
           <Badge
             variant={
               task.priority === 'high'
@@ -54,12 +54,12 @@ function TaskCard({ task, asHandle, ...props }: TaskCardProps) {
                   : 'warning'
             }
             appearance='outline'
-            className='pointer-events-none h-5 rounded-sm px-1.5 text-[11px] capitalize shrink-0'
+            className='pointer-events-none h-5 shrink-0 rounded-sm px-1.5 text-[11px] capitalize'
           >
             {task.priority}
           </Badge>
         </div>
-        <div className='flex items-center justify-between text-muted-foreground text-xs'>
+        <div className='flex items-center justify-between text-xs text-muted-foreground'>
           {task.assignee && (
             <div className='flex items-center gap-1'>
               <Avatar className='size-4'>
@@ -70,7 +70,7 @@ function TaskCard({ task, asHandle, ...props }: TaskCardProps) {
             </div>
           )}
           {task.dueDate && (
-            <time className='text-[10px] tabular-nums whitespace-nowrap'>
+            <time className='text-[10px] whitespace-nowrap tabular-nums'>
               {task.dueDate}
             </time>
           )}
@@ -103,13 +103,13 @@ function TaskColumn({ value, tasks, isOverlay, ...props }: TaskColumnProps) {
       {...props}
       className='rounded-md border bg-card p-2.5 shadow-xs'
     >
-      <div className='flex items-center justify-between mb-2.5'>
+      <div className='mb-2.5 flex items-center justify-between'>
         <div className='flex items-center gap-2.5'>
-          <span className='font-semibold text-sm'>{COLUMN_TITLES[value]}</span>
+          <span className='text-sm font-semibold'>{COLUMN_TITLES[value]}</span>
           <Badge variant='secondary'>{tasks.length}</Badge>
         </div>
         <KanbanColumnHandle asChild>
-          <Button variant='dim' size='sm' mode='icon'>
+          <Button size='sm'>
             <GripVertical />
           </Button>
         </KanbanColumnHandle>
