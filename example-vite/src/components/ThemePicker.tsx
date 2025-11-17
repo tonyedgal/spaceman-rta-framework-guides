@@ -138,7 +138,7 @@ const ThemePicker = () => {
   }, []);
 
   return (
-    <Marquee className='col-start-2 xl:col-start-3 flex items-center'>
+    <Marquee className='col-start-2 flex items-center xl:col-start-3'>
       <MarqueeFade side='left' />
       <MarqueeFade side='right' />
       <MarqueeContent>
@@ -151,7 +151,7 @@ const ThemePicker = () => {
             <Button
               key={colorTheme.value}
               onClick={createColorThemeToggle(colorTheme.value)}
-              className='transition-colors mx-5 border w-44'
+              className='mx-5 w-50 border transition-colors'
               style={{
                 backgroundColor: colors['--primary'],
                 color: colors['--primary-foreground'],
@@ -161,7 +161,7 @@ const ThemePicker = () => {
                 style={{
                   backgroundImage: `conic-gradient( ${colors['--primary']} 120deg, ${colors['--secondary']} 120deg 240deg, ${colors['--accent']} 240deg)`,
                 }}
-                className='size-5 rounded-full border mr-2'
+                className='mr-2 size-5 rounded-full border'
               ></div>
               {colorTheme.name}
             </Button>
